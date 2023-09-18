@@ -1,10 +1,10 @@
 import { Stack, Text } from '@mantine/core';
-import { ToDo, ToDoIdType } from '../../hooks/useToDo';
+import { IToDo, ToDoIdType } from '../../hooks/useToDo';
 import { FC } from 'react';
 import { ToDoListItem } from './ToDoListItem';
 
 interface ToDoList {
-  toDoList: ToDo[];
+  toDoList: IToDo[];
   completeToDo: (toDoId: ToDoIdType) => void;
   unCompleteToDo: (toDoId: ToDoIdType) => void;
   deleteToDo: (toDoId: ToDoIdType) => void;

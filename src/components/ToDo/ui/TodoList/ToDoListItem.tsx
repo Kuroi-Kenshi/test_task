@@ -1,12 +1,12 @@
 import { ActionIcon, Flex, Group, Text } from '@mantine/core';
 import { IconCircle, IconCircleCheck, IconX } from '@tabler/icons-react';
 import { ToDoListItemIcon } from './ToDoListIcon';
-import { ToDo, ToDoIdType } from '../../hooks/useToDo';
+import { IToDo, ToDoIdType } from '../../hooks/useToDo';
 import { FC, memo, useCallback, useEffect, useRef, useState } from 'react';
 import { UpdateToDoInput } from '../ToDoInput/UpdateToDoInput';
 
 interface ToDoListItemProps {
-  toDoItem: ToDo;
+  toDoItem: IToDo;
   onClickAction: (id: ToDoIdType) => void;
   deleteToDo: (id: ToDoIdType) => void;
   updateToDo: (toDoId: ToDoIdType, title: string) => void;

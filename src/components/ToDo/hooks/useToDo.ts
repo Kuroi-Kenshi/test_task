@@ -1,15 +1,15 @@
 import { useCallback, useState } from 'react';
 
-export interface ToDo {
+export interface IToDo {
   id: number;
   title: string;
   completed: boolean;
 }
 
-export type ToDoIdType = ToDo['id'];
+export type ToDoIdType = IToDo['id'];
 
-export function useToDos(initialToDos?: ToDo[]) {
-  const [toDoList, setToDoList] = useState<ToDo[]>(initialToDos || []);
+export function useToDos(initialToDos?: IToDo[]) {
+  const [toDoList, setToDoList] = useState<IToDo[]>(initialToDos || []);
 
   const activeList = toDoList.filter((todo) => !todo.completed);
   const completedList = toDoList.filter((todo) => todo.completed);
