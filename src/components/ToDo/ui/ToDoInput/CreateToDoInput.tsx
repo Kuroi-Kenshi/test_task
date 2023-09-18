@@ -1,11 +1,11 @@
 import { TextInput } from '@mantine/core';
-import { ChangeEvent, FC, useState } from 'react';
+import { ChangeEvent, FC, memo, useState } from 'react';
 
 interface CreateToDoInputProps {
   addToDo: (title: string) => void;
 }
 
-export const CreateToDoInput: FC<CreateToDoInputProps> = ({ addToDo }) => {
+export const CreateToDoInput: FC<CreateToDoInputProps> = memo(({ addToDo }) => {
   const [toDoName, setToDoName] = useState('');
   const onSubmit = (e: ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -24,4 +24,4 @@ export const CreateToDoInput: FC<CreateToDoInputProps> = ({ addToDo }) => {
       />
     </form>
   );
-};
+});
