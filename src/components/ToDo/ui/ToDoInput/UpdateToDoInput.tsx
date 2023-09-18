@@ -1,10 +1,10 @@
 import { TextInput } from '@mantine/core';
 import { ChangeEvent, FC, useState } from 'react';
-import { ToDo, ToDoIdType } from '../../hooks/useToDo';
+import { IToDo, ToDoIdType } from '../../hooks/useToDo';
 
 interface UpdateToDoInputProps {
   updateTodo: (id: ToDoIdType, title: string) => void;
-  toToItem: ToDo;
+  toToItem: IToDo;
   onFinishEdit: () => void;
 }
 
