@@ -11,6 +11,7 @@ export const CreateToDoInput: FC<CreateToDoInputProps> = memo(({ addToDo }) => {
     e.preventDefault();
 
     addToDo(toDoName);
+    setToDoName('');
   };
 
   return (
@@ -19,6 +20,7 @@ export const CreateToDoInput: FC<CreateToDoInputProps> = memo(({ addToDo }) => {
         data-testid="createToDoInput"
         placeholder="Введите название"
         onChange={(e: ChangeEvent<HTMLInputElement>) => setToDoName(e.target.value)}
+        value={toDoName}
         autoFocus={true}
         size="lg"
       />
