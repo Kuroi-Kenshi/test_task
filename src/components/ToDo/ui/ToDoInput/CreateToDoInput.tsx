@@ -10,6 +10,8 @@ export const CreateToDoInput: FC<CreateToDoInputProps> = memo(({ addToDo }) => {
   const onSubmit = (e: ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    if (!toDoName) return;
+
     addToDo(toDoName);
     setToDoName('');
   };

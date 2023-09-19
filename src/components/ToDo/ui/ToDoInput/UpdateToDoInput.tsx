@@ -17,6 +17,8 @@ export const UpdateToDoInput: FC<UpdateToDoInputProps> = ({
   const onSubmit = (e: ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    if (!toDoName) return;
+
     onFinishEdit();
     updateTodo(toToItem.id, toDoName);
   };
