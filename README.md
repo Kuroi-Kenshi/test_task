@@ -11,8 +11,10 @@ cd test_task
 npm i && npm run start
 ```
 
-For check tests
+Run tests with coverage report
 
 ```sh
 npm run test:coverage
 ```
+
+##### [Link to deployed app](https://test-task-black-two.vercel.app/)
